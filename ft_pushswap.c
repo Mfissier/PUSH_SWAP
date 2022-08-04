@@ -6,7 +6,7 @@
 /*   By: slepetit <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:50:12 by slepetit          #+#    #+#             */
-/*   Updated: 2022/08/02 13:41:38 by mafissie         ###   ########.fr       */
+/*   Updated: 2022/08/04 11:06:16 by mafissie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_exit(void)
 {
-	write(2, "Error\n", 7);
+	write(2, "Error\n", 6);
 	exit(2);
 }
 
@@ -49,6 +49,7 @@ int	ft_onearg(char *arg, int **tab)
 	while (*(str + i))
 	{
 		ft_atoi_free(*(str + i), str);
+		ft_check_error_onearg(*(str + i), str);
 		i++;
 	}
 	size = ft_len(str);

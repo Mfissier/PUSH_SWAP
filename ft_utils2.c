@@ -6,7 +6,7 @@
 /*   By: mafissie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:05:36 by mafissie          #+#    #+#             */
-/*   Updated: 2022/08/02 12:19:36 by mafissie         ###   ########.fr       */
+/*   Updated: 2022/08/04 13:22:07 by mafissie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	else if (*nptr == '+')
-		nptr++;
+		if (!*(++nptr))
+			ft_exit();
 	while (*nptr && (*nptr >= '0' && *nptr <= '9'))
 	{
 		nb = (nb * 10) + *(nptr++) - 48;

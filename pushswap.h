@@ -6,17 +6,14 @@
 /*   By: mafissie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 10:09:50 by mafissie          #+#    #+#             */
-/*   Updated: 2022/08/02 13:32:39 by mafissie         ###   ########.fr       */
+/*   Updated: 2022/08/04 11:02:57 by mafissie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 # include <stdlib.h>
-# include <stddef.h>
-# include <string.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <limits.h>
 
 typedef struct s_stack
@@ -65,5 +62,6 @@ char	*ft_wordtab(const char *s, char c, char **str);
 int		ft_wordnbr(char const *s, char c);
 char	**ft_split(char const *s, char c);
 void	ft_digit(char *s);
+void	ft_check_error_onearg(char *str, char **sstr);
 
 #endif

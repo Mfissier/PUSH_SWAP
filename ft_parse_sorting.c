@@ -6,7 +6,7 @@
 /*   By: mafissie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 15:45:14 by mafissie          #+#    #+#             */
-/*   Updated: 2022/08/02 10:16:10 by mafissie         ###   ########.fr       */
+/*   Updated: 2022/08/04 11:09:06 by mafissie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void	ft_sort_group_five(t_stack **a, t_stack **b)
 
 void	ft_parse_sort(t_stack **a, t_stack **b, int size)
 {
+	if (ft_is_list_sort(a))
+		return ;
 	if (size <= 5)
 	{
 		if (size == 2)

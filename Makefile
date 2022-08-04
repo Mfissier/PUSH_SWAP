@@ -10,8 +10,9 @@ SRC += ft_ss.c
 SRC += ft_struct.c
 SRC += ft_utils.c
 SRC += ft_utils2.c
+SRC += ft_check_error_onearg.c
 
-OBJ = $(SRC:.c=.o)
+OBJ = ${SRC:.c=.o} 
 
 CC = gcc
 
@@ -21,11 +22,11 @@ EXEC = push_swap
 
 all: $(EXEC)
 
-$(EXEC): $(OBJ)
+$(EXEC): $(OBJ) 
 	$(CC) $(CFLAGS) -o $(EXEC) $(OBJ) 
 
-$(OBJ):
-	$(CC) $(CFLAGS) -c $(SRC)
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< 
 
 clean:
 	rm -rf $(OBJ)
@@ -33,10 +34,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME) $(EXEC)
 
-run:
-	./$(EXEC) "5 4 2 3 1"
-
 re: fclean all
 
 .PHONY: all clean fclean re
-
